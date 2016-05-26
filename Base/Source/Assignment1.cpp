@@ -185,13 +185,13 @@ void Assignment1::Init()
 	meshList[HEADSTONE1] = MeshBuilder::GenerateOBJ("Headstone1", "OBJ//Headstone 1.obj");
 	meshList[HEADSTONE1]->textureArray[0] = LoadTGA("Image//Headstone1UV.tga");
 
-	meshList[GEO_SPRITE_ANIMATION] = MeshBuilder::GenerateSpriteAnimation("cat", 4, 10);
+	meshList[GEO_SPRITE_ANIMATION] = MeshBuilder::GenerateSpriteAnimation("cat", 1, 6);
 	meshList[GEO_SPRITE_ANIMATION]->textureArray[0] = LoadTGA("Image//cat.tga");
 	SpriteAnimation *sa = dynamic_cast<SpriteAnimation*>(meshList[GEO_SPRITE_ANIMATION]);
 	if (sa)
 	{
 		sa->m_anim = new Animation();
-		sa->m_anim->Set(0, 9, 1, 1.f, true);
+		sa->m_anim->Set(0, 5, 1, 1.f, true);
 	}
 
 	// Projection matrix : 45° Field of View, 4:3 ratio, display range : 0.1 unit <-> 1000 units
